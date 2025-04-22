@@ -17,4 +17,5 @@ class TestAdd(unittest.TestCase):
     
     def test_add_different_delimter(self):
         self.assertEqual(add("//;\n1;2"), 3)
-        self.assertEqual(add("//\t\n1;2,3\t4"), 10)
+        self.assertEqual(add("//\t\n1\t2,3\t4"), 10)
+        self.assertEqual(add("//@\n1@2,3@4"), 10)

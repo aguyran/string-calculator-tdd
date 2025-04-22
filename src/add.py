@@ -6,7 +6,7 @@ def add(numbers: str) -> int:
         return 0
     delimiter = "\\n|,|\n"
     if numbers.startswith("//"):
-        inner_delimiter = re.match(r"//(.*)\n", numbers).group(1)
+        inner_delimiter = re.match(r"//([\s\S]*)[\n|\\n]", numbers).group(1)
         delimiter = delimiter + "|" + inner_delimiter
         
         match = re.match(r"//(.*)\n", numbers)
