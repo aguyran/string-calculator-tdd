@@ -14,7 +14,7 @@ class TestAdd(unittest.TestCase):
 
     def test_add_multiple_numbers_newline(self):
         self.assertEqual(add("1\n2,3"), 6)
-
+    # I am assuming that different delimiter doesnt remove support for \n and , thats all
     def test_add_different_delimter(self):
         self.assertEqual(add("//;\n1;2"), 3)
         self.assertEqual(add("//\t\n1\t2,3\t4"), 10)
