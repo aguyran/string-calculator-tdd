@@ -1,2 +1,2 @@
-DEFAULT_DELIMETER =  "\\n|,|\n"
-GET_DELIMETER_REGEX = r"//([\s\S]*)[\n|\\n]"
+DEFAULT_DELIMITIR =  "\\n|,|\n"
+GET_DELIMITIR_REGEX = r"//([\s\S]*)[\n|\\n]"
