@@ -1,3 +1,5 @@
-def add(number: str) -> int:
-    if number == "":
+def add(numbers: str) -> int:
+    if numbers == "":
         return 0
+    numbers_list = numbers.split(",")
+    return sum(int(number) for number in numbers_list)
