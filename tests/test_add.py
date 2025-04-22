@@ -19,3 +19,9 @@ class TestAdd(unittest.TestCase):
         self.assertEqual(add("//;\n1;2"), 3)
         self.assertEqual(add("//\t\n1\t2,3\t4"), 10)
         self.assertEqual(add("//@\n1@2,3@4"), 10)
+    
+    def test_add_individual_negative_number(self):
+        with self.assertRaises(Exception) as cm:
+            add("-1,2")
+        self.assertEqual(str(cm.exception), "negative numbers not allowed -1")
+        
