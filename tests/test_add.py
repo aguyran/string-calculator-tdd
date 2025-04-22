@@ -9,8 +9,12 @@ class TestAdd(unittest.TestCase):
     def test_add_one_number(self):
         self.assertEqual(add("1"), 1)
     
-    def test_multiple_numbers(self):
+    def test_add_multiple_numbers(self):
         self.assertEqual(add("1,5"), 6)
 
-    def test_multiple_numbers_newline(self):
+    def test_add_multiple_numbers_newline(self):
         self.assertEqual(add("1\n2,3"), 6)
+    
+    def test_add_different_delimter(self):
+        self.assertEqual(add("//;\n1;2"), 3)
+        self.assertEqual(add("//\t\n1;2,3\t4"), 10)
