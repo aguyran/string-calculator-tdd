@@ -13,9 +13,12 @@ def add(numbers: str) -> int:
         end_pos = match.end()
         numbers = numbers[end_pos:]
     numbers_list = re.split(rf"{delimiter}", numbers)
+    negative_numbers=[]
     for i in numbers_list:
         if int(i) < 0:
-            raise Exception(f"negative numbers not allowed {i}")
+            negative_numbers.append(i)
+    if negative_numbers:
+        raise Exception(f"negative numbers not allowed {','.join(negative_numbers)}")
    
         
     return sum(int(number) for number in numbers_list)

@@ -25,3 +25,7 @@ class TestAdd(unittest.TestCase):
             add("-1,2")
         self.assertEqual(str(cm.exception), "negative numbers not allowed -1")
         
+    def test_add_multiple_negative_number(self):
+        with self.assertRaises(Exception) as cm:
+            add("-1,-2,3,-4")
+        self.assertEqual(str(cm.exception), "negative numbers not allowed -1,-2,-4")
